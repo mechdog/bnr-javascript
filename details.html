@@ -37,6 +37,18 @@
 	<script src="js/routemanager.js"></script>
 	<script src="js/details.js"></script>
 
+<script type="text/x-handlebars-template" id="entry-listing-template" >
+
+	<tr id="{{ id }}">
+		<td>{{ type }}</td>
+		<td>{{ location }}</td>
+		<td>{{ date }}</td>
+		<td>{{ witnesses }}</td>
+		<td>{{ name }}</td>
+	</tr>
+	
+</script>
+
         <script id="entry-details-template" type="text/x-handlebars-template">
             <label>Type</label>
             <input name="type" value="{{ type }}">
@@ -52,6 +64,8 @@
             <br>
             <label>Name</label>
             <input name="name" value="{{ name }}">
+            <br>
+            <input type="submit">
         </script>
 
 

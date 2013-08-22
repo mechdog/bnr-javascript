@@ -6,7 +6,19 @@ var addEntry = function (entry) {
 
 };
 
-
+var findEntry = function (id){
+	var index= -1;
+	entries.forEach(function (item, idx) {
+		if (item.id === id) {
+			index=idx;
+		}
+	});
+	if (index !== -1){
+		return entries[index];
+	} else {
+		return null;
+	}
+}
 
 var removeEntry = function (entryToDelete) {
 	entries = entries.filter(function (item) {
@@ -61,6 +73,7 @@ var makeEntry = function(overrides) {
 
 $(document).ready( function () {
 	retrieveEntries();
+	RouteManager.init();
 
 })
 
