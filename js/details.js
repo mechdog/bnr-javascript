@@ -4,11 +4,9 @@ var DetailView = {
 		this.modelObject=newModelObject;
 	},
 	render: function ($domElement) {
-		$domElement.find("[name='type']").val(this.modelObject.type);
-		$domElement.find("[name='location']").val(this.modelObject.location);
-		$domElement.find("[name='date']").val(this.modelObject.date);
-		$domElement.find("[name='witnesses']").val(this.modelObject.witnesses);
-		$domElement.find("[name='name']").val(this.modelObject.name);
+ 		var source = $("#entry-details-template").html();
+        var template = Handlebars.compile(source);
+        $domElement.append(template(this.modelObject));
 
 	}
 
@@ -30,7 +28,7 @@ $(document).ready(function () {
 
 	   }  );
 
-	var $form = $(".details-form");
+	var $form = $(".detail-form");
 	DetailView.init(creature);
 	DetailView.render($form);
 	

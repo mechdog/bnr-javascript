@@ -21,41 +21,11 @@
 		</nav>
 	</header>
 
-	<section class="container">
-		<form action"" class="details-form form-horizontal" role="form">
-		<div class="control-group">
-			<label class="control-label">Type</label>
-			<div class="controls">
-				<input name="type">
-			</div>
-		</div>	
-		<div class="control-group">
-			<label class="control-label">Date</label>
-			<div class="controls">
-				<input name="date">
-			</div>
-		</div>	
-		<div class="control-group">
-			<label class="control-label">Location</label>
-			<div class="controls">
-				<input name="location">
-			</div>
-		</div>	
-		<div class="control-group">
-			<label class="control-label">Witnesses</label>
-			<div class="controls">
-				<input name="witnesses" type="number">
-			</div>
-		</div>	
-		<div class="control-group">
-			<label class="control-label">Name</label>
-			<div class="controls">
-				<input name="name">
-			</div>
-		</div>	
+       <section class="container">
+            <form action="" class="detail-form">
 
-		</form>
-	</section>
+            </form>
+        </section>
 
 
 
@@ -67,6 +37,24 @@
 	<script src="js/routemanager.js"></script>
 	<script src="js/details.js"></script>
 
+        <script id="entry-details-template" type="text/x-handlebars-template">
+            <label>Type</label>
+            <input name="type" value="{{ type }}">
+            <br>
+            <label>Date</label>
+            <input name="date" type="date" value="{{ date }}">
+            <br>
+            <label>Location</label>
+            <input name="location" value="{{ location }}">
+            <br>
+            <label>Witnesses</label>
+            <input name="witnesses" type="number" value="{{ witnesses }}">
+            <br>
+            <label>Name</label>
+            <input name="name" value="{{ name }}">
+        </script>
+
 
 </body>
 </html>
+
